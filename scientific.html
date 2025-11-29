@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific calculator</title>
+     <link rel="stylesheet" href="Scientific.css">
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="longin page.html" />
+     <link rel="stylesheet" href="hero-slideshow.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo-area">
+      <img src="Hacked.jpg" alt="My Calculators" class="logo-img" />
+      <h2 class="logo-text">scientific Calculator</h2>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="longin page.html" class=>sign up</a>
+      <a href="home.html" class="active">Home</a>
+      <a href="simple.html">Simple</a>
+      <a href="scientific.html">Scientific</a>
+      <a href="contact.html">Contact Us</a>
+         <a href="about us.html">Abount Us</a>
+         <a href="gallery.html">Gallery</a>
+       <a><button id="logout">Logout</button></a>
+    
+    </nav>
+  </aside>
+
+      <div class="calculator">
+    <input type="text" id="display" disabled />
+    <div class="buttons">
+      <button class="clear" onclick="clearDisplay()">C</button>
+      <button onclick="appendValue('(')">(</button>
+      <button onclick="appendValue(')')">)</button>
+      <button onclick="appendValue('^')">xʸ</button>
+      <button class="operator" onclick="appendValue('/')">÷</button>
+
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button class="operator" onclick="appendValue('*')">×</button>
+      <button onclick="appendValue('sqrt(')">√</button>
+
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button class="operator" onclick="appendValue('-')">−</button>
+      <button onclick="appendValue('log(')">log</button>
+
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button class="operator" onclick="appendValue('+')">+</button>
+      <button onclick="appendValue('ln(')">ln</button>
+
+      <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button onclick="appendValue('sin(')">sin</button>
+      <button onclick="appendValue('cos(')">cos</button>
+      <button onclick="appendValue('tan(')">tan</button>
+
+      <button class="equal" style="grid-column: span 5;" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+    <br><br><br><br><br><br><br><br><br><br><footer class="site-footer">
+    <p>© 2025 My Calculator Website. All rights reserved.</p>
+    <p>© CREATED BY THE HUMBLES PROGRAMMERS.</p></br>
+  </footer>
+  
+
+  <script>
+    const display = document.getElementById("display");
+
+    function appendValue(value) {
+      display.value += value;
+    }
+
+    function clearDisplay() {
+      display.value = "";
+    }
+
+    function calculate() {
+      let expression = display.value;
+
+      expression = expression.replace(/\^/g, "**");
+      expression = expression.replace(/sqrt\(/g, "Math.sqrt(");
+      expression = expression.replace(/log\(/g, "Math.log10(");
+      expression = expression.replace(/ln\(/g, "Math.log(");
+      expression = expression.replace(/sin\(/g, "Math.sin(");
+      expression = expression.replace(/cos\(/g, "Math.cos(");
+      expression = expression.replace(/tan\(/g, "Math.tan(");
+
+      try {
+        display.value = eval(expression);
+      } catch {
+        display.value = "Error";
+      }
+    }
+  </script>
+    
+</body>
+</html>

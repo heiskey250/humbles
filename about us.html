@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | THE HUMBLES PROGRAMMERS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+   
+     <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;position:sticky;top:0;background:#fff;backdrop-filter:blur(6px);z-index:50;border-bottom:1px solid #eee}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:700;color:var(--accent);font-size:1.2rem}
+    .logo img{height:46px;width:auto;border-radius:8px}
+    /* Responsive navigation */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: #fff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  nav.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+    nav{display:flex;align-items:center;gap:16px}
+    nav a{color:#333;text-decoration:none;font-weight:600;transition:color 0.2s ease}
+    nav a:hover{color:var(--accent)}
+    .menu-toggle {display:none;font-size:1.8rem;cursor:pointer;background:none;border:none;color:#333}
+    @media (max-width:768px){
+      nav{display:none;flex-direction:column;position:absolute;top:70px;right:20px;background:#fff;padding:12px 18px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1)}
+      nav.active{display:flex}
+      .menu-toggle{display:block}
+    }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #004080;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .values, .services, .why-choose {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #004080;
+        }
+
+         footer{background:#222;color:#ccc;padding:40px 20px;margin-top:40px}
+    .footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;text-align:left}
+    footer h4{color:#fff;margin-bottom:12px}
+    footer p, footer a{font-size:14px;color:#ccc;text-decoration:none}
+    footer a:hover{color:var(--accent)}
+    .social-icons{margin-top:10px;display:flex;gap:12px}
+    .social-icons a{color:#fff;font-size:20px;transition:0.3s}
+    .social-icons a:hover{color:var(--accent)}
+    .footer-bottom{text-align:center;margin-top:20px;font-size:13px;color:#999}
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+      <img src="logo 3.jpg" alt="logo 3.jpg" style="height:200px; width:200px;">
+    </div>
+  </div>
+
+  <!-- Hamburger button -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <nav id="navMenu">
+    <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="home.html#contact">Contact Us</a>
+  </nav>
+</header>
+
+
+<section id="who-we-are">
+    <h2>Who We Are</h2>
+    <div class="content">
+        <p>At <strong>THE HUMBLES PROGRAMMERS</strong>, we are passionate about designing websites. elegance, we specialize in delivering high-quality services for both residential and commercial needs. Our dedicated professionals combine expertise, innovation, and attention to detail to bring your ideas to life with precision and excellence.</p>
+    </div>
+</section>
+
+<section id="mission-vision">
+    <h2>Mission & Vision</h2>
+    <div class="content">
+        <p><strong>Mission:</strong> To provide exceptional programming, web designing,UI&UX designing,and Graphic designing.</p>
+        <p><strong>Vision:</strong> To become the leading engineers solutions programmers in Rwanda and beyond, recognized for transforming ICT into extraordinary experiences through innovative programming, web designing, and Graphic design.</p>
+    </div>
+</section>
+
+<section id="values">
+    <h2>Our Values</h2>
+    <div class="values">
+        <div class="card">
+            <h3>Programming</h3>
+            <p>We think outside the box to deliver unique solutions to our client's needs.</p>
+        </div>
+        <div class="card">
+            <h3>Designing</h3>
+            <p>Excellence is at the heart of everything we do, from desi and more about that.</p>
+        </div>
+        <div class="card">
+            <h3>Customer Focus</h3>
+            <p>Our clients’ satisfaction drives our work, and we ensure every detail exceeds expectations.</p>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        </div>
+        <div class="card">
+            <h3>programming,website designing & Graphic design....</h3>
+            <p>We deliver your through in to reality.</p>
+        </div>
+    </div>
+</section>
+
+<section id="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div class="why-choose">
+        <div class="card">
+            <h3>Expert Team</h3>
+            <p>Skilled professionals committed to delivering excellence in every project.</p>
+        </div>
+        <div class="card">
+            <h3>Reliable Service</h3>
+            <p>Timely, efficient, and dependable solutions that you can trust.</p>
+        </div>
+        <div class="card">
+            <h3>Innovative programming</h3>
+            <p>Combining creativity and modern trends to make your dreams came true though programming.</p>
+        </div>
+        <div class="card">
+            <h3>Client Satisfaction</h3>
+            <p>Our goal is to exceed expectations and bring your ideas to reality.</p>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="footer-container">
+      <div>
+        <h4>About Us</h4>
+        <p>THE HUMBLES PROGRAMMERS. .</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="gallery.html">Gallery</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-envelope"></i> nshutijoshau5@gmail</p>
+ fa-phone"></i> +        <p><i class="fa-solid250791392430"></p>
+        <p>📍 The humbles programmers, Nyarungege - Kigali</p>
+        <div class="social-icons">
+          <a href="https://wa.me/250791392430" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:nshutijoshua5@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> THE HUMBLES PROGRAMMERS Ltd. All Rights Reserved.
+    </div>
+  </footer>
+  <script>
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+
+</head>
+<body>
+    <a href="homepage.html"><br></a>
+</body>
+</html>
